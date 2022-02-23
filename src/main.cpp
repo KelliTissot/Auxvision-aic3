@@ -24,17 +24,12 @@ void loop()
    {
       float potencia = distancia_min -distancia;
       Serial.println(potencia);
-      //Serial.print("\nVai bater!!!\n");
       ledcWrite(led_pwm, (255-potencia*5));
    }
    else
    {
-      //Serial.print("\nVai na fé!!!\n");
       ledcWrite(led_pwm, 255);
    }
-   //Serial.print("Sensor 01: ");
-   //Serial.print(ultrasonic.read()); // Prints the distance on the default unit (centimeters)
-   //Serial.println("cm");
 
       delay(500);
 }
